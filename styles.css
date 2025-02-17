@@ -1,0 +1,230 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d8d8d8;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+/* Header Styles */
+header {
+    background-color: #13323d;
+    font-family: "Saira Stencil One", serif;
+    text-align: center;
+    padding: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    color: rgb(206, 205, 177);
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+body h4 {
+    margin-top: 40px;
+    margin-left: 275px;
+    font-size: 24px;
+}
+
+/* Banner Container */
+.banner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Banner Style */
+.banner {
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #3c6b66;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-btn:hover {
+    background-color: #0e262e;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    background-color: rgb(241, 241, 233);
+    border-top: 2px solid #ddd;
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    height: 200px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Container for both rotating and static images */
+.image-container {
+    display: flex;                 /* Flexbox to align items side by side */
+    gap: 20px;                     /* Space between rotating and static images */
+    margin-left: 80px;
+}
+
+/* Container for the rotating image frame and text */
+.image-frame-container {
+    text-align: center;            /* Center the text above the image */
+}
+
+/* Text above the rotating images */
+.image-title {
+    font-size: 18px;               /* Size of the title text */
+    font-weight: bold;             /* Bold text */
+    margin-bottom: 10px;           /* Space between text and image */
+}
+
+/* Rotating Image Frame */
+.image-frame {
+    width: 450px;
+    height: 650px;
+    position: relative;
+    overflow: visible;
+}
+
+.image-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    animation: rotateImages 18s infinite;
+}
+
+.image-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.image-slide:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.image-slide:nth-child(3) {
+    animation-delay: 12s;
+}
+
+/* Animation for rotating images */
+@keyframes rotateImages {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Static Image container with text */
+.static-image-container {
+    text-align: center;            /* Center the text above the image */
+}
+
+/* Static Image text */
+.static-image-container .image-title {
+    font-size: 18px;               /* Size of the title text */
+    font-weight: bold;             /* Bold text */
+    margin-bottom: 10px;           /* Space between text and image */
+}
+
+/* Static Image */
+.static-image {
+    width: 450px;                  /* Fixed width */
+    height: 650px;                 /* Fixed height */
+}
+
+/* Arrow between the images */
+.arrow-container {
+    display: flex;                 /* Flexbox to align the arrow */
+    align-items: center;           /* Vertically align the arrow */
+    justify-content: center;       /* Center the arrow horizontally */
+    font-size: 30px;               /* Adjust the arrow size */
+    font-weight: 900;             /* Bold arrow */
+}
+
+/* Styling for hover transition and smooth dropdown effect */
+.banner .dropdown-content {
+    transition: all 0.3s ease-in-out;
+}
+
+.banner.open .dropdown-content {
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(140, 139, 136);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    position:fixed;bottom:0;left:0;right:0;
+    height: 115px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Email Link Style */
+footer a {
+    color: #6d5305; /* Change this color to your desired link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #332305; /* Change this color to the hover color */
+    text-decoration: underline;
+}
+
+li {
+    margin-left: 50px;
+}
